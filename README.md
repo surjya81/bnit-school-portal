@@ -1,14 +1,13 @@
-# Excellence Academy School Website
+# BNIT Public School Website
 
 ## Project Overview
 
-Excellence Academy is a responsive, modern school website built using React and Tailwind CSS. The website showcases school information, announcements, events, and provides quick navigation for students, parents, and staff.
+This website is a responsive, modern school website built using React and Tailwind CSS. The website showcases school information, announcements, events, and provides quick navigation for students, parents, and staff.
 
 ## Features
 
 - Responsive mobile-friendly design
 - Dynamic navigation with mobile menu toggle
-- Hero section with background image
 - Sections for:
   - Announcements
   - Upcoming Events
