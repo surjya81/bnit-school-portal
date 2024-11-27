@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders welcome message', () => {
   render(<App />);
-  const linkElement = screen.getByText(/BNIT PUBLIC SCHOOL/i);
-  expect(linkElement).toBeInTheDocument();
+  // Test for a specific element or refine query to avoid ambiguity
+  const welcomeMessage = screen.getByText(/Welcome to BNIT Public School/i, { selector: 'h1' });
+  expect(welcomeMessage).toBeInTheDocument();
 });
