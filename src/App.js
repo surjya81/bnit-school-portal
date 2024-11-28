@@ -171,10 +171,11 @@ function SchoolWebsite() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
-              <p>123 School Street</p>
-              <p>Anytown, ST 12345</p>
-              <p>Phone: (555) 123-4567</p>
-              <p>Email: info@excellence.edu</p>
+              <p>Athagarh</p>
+              <p>Cuttack</p>
+              <p>Phone: (+91) 9338089898</p>
+              <p style={{paddingLeft: '53px'}}>(+91) 9937884456</p>
+              <p>Email: bnitpublicschool@gmail.com</p>
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
