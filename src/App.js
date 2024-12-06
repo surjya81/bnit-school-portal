@@ -3,6 +3,7 @@ import { Bell, Calendar, Book, Users, ChevronRight, Search, Menu, X } from 'luci
 import './App.css'; // You'll need to create this for any custom styles
 import logo from './assets/SchoolLogo.jpg';
 import campus from './assets/SchoolCampus.jpg';
+import NoticeBoard from './components/NoticeBoard';
 
 function SchoolWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -144,6 +145,8 @@ function SchoolWebsite() {
             </div>
           </div>
         </div>
+
+        <NoticeBoard />
 
         {/* Feature Sections */}
         <div className="grid md:grid-cols-3 gap-8 mt-12">
