@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/bnit-school-portal/static/css/main.9653b891.css",
-    "main.js": "/bnit-school-portal/static/js/main.da653b27.js",
+    "main.js": "/bnit-school-portal/static/js/main.af09e9b6.js",
     "static/js/453.12b9aed6.chunk.js": "/bnit-school-portal/static/js/453.12b9aed6.chunk.js",
     "static/media/SchoolLogo.jpg": "/bnit-school-portal/static/media/SchoolLogo.2f774c935a1c62fa9ba1.jpg",
     "static/media/SchoolCampus.jpg": "/bnit-school-portal/static/media/SchoolCampus.46305293ad5624940130.jpg",
     "index.html": "/bnit-school-portal/index.html",
     "main.9653b891.css.map": "/bnit-school-portal/static/css/main.9653b891.css.map",
-    "main.da653b27.js.map": "/bnit-school-portal/static/js/main.da653b27.js.map",
+    "main.af09e9b6.js.map": "/bnit-school-portal/static/js/main.af09e9b6.js.map",
     "453.12b9aed6.chunk.js.map": "/bnit-school-portal/static/js/453.12b9aed6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9653b891.css",
-    "static/js/main.da653b27.js"
+    "static/js/main.af09e9b6.js"
   ]
 }
