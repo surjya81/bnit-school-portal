@@ -8,14 +8,14 @@ const initialNotices = [
     title: "Student Application Form", 
     date: "December 07, 2024",
     description: "Student Application form",
-    pdfUrl: "Addmission-Form.pdf"
+    pdfUrl: "documents/Addmission-Form.pdf"
   },
   {
     id: 2, 
     title: "DOC Permission and Approval", 
     date: "December 06, 2024",
     description: "Approval of opening of BNIT Public School for 2024-25",
-    pdfUrl: "DEO-Approval.pdf"
+    pdfUrl: "documents/DEO-Approval.pdf"
 //   },
 //   {
 //     id: 3,
@@ -43,17 +43,20 @@ function NoticeBoard() {
     };
   
     const handleDownloadPDF = (pdfUrl) => {
-      // Construct the full URL to the PDF file
-      const pdfPath = `/documents/${pdfUrl}`;
-  
-      // Create a temporary anchor element to trigger the download
-      const link = document.createElement('a');
-      link.href = pdfPath;
-      link.setAttribute('download', pdfUrl);
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    };
+        // Construct the full URL to the PDF file
+        const pdfPath = `${process.env.PUBLIC_URL}/${pdfUrl}`;
+      
+        // Get the file name from the pdfUrl and remove the "documents/" prefix
+        const fileName = pdfUrl.split('/').pop();
+        
+        // Create a temporary anchor element to trigger the download
+        const link = document.createElement('a');
+        link.href = pdfPath;
+        link.setAttribute('download', fileName);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      };
   
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">
