@@ -45,6 +45,7 @@ function NoticeBoard() {
     const handleDownloadPDF = (pdfUrl) => {
         // Construct the full URL to the PDF file
         const pdfPath = `${process.env.PUBLIC_URL}/${pdfUrl}`;
+        console.log('Full PDF Path:', pdfPath); 
       
         // Get the file name from the pdfUrl and remove the "documents/" prefix
         const fileName = pdfUrl.split('/').pop();
