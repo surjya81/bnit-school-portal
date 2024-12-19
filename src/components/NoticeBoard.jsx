@@ -8,7 +8,7 @@ const initialNotices = [
     title: "Student Application Form", 
     date: "December 07, 2024",
     description: "Student Application form",
-    pdfUrl: "documents/Addmission-Form.pdf"
+    pdfUrl: "documents/Admission-Form.pdf"
   },
   {
     id: 2, 
@@ -16,13 +16,13 @@ const initialNotices = [
     date: "December 06, 2024",
     description: "Approval of opening of BNIT Public School for 2024-25",
     pdfUrl: "documents/DEO-Approval.pdf"
-//   },
-//   {
-//     id: 3,
-//     title: "Board Meeting Announcement",
-//     date: "April 5, 2024",
-//     description: "All parents and staff are invited to attend",
-//     pdfUrl: "/path/to/board-meeting-details.pdf"
+  },
+  {
+    id: 3,
+    title: "Prospectus",
+    date: "December 19, 2024",
+    description: "School's Prospectus for 2024-25",
+    pdfUrl: "/documents/Prospectus.pdf"
 //   },
 //   {
 //     id: 4,
@@ -34,7 +34,14 @@ const initialNotices = [
 ];
 
 function NoticeBoard() {
-    const [notices, /*setNotices*/] = useState(initialNotices);
+    // Sort notices by date in descending order (most recent first)
+    const sortedNotices = [...initialNotices].sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return dateB - dateA; // Sort in descending order
+    });
+  
+    const [notices] = useState(sortedNotices);
     const [selectedNotice, setSelectedNotice] = useState(null);
     const [showAllNotices, setShowAllNotices] = useState(false);
   
@@ -43,21 +50,13 @@ function NoticeBoard() {
     };
   
     const handleDownloadPDF = (pdfUrl) => {
-        // Construct the full URL to the PDF file
-        const pdfPath = `${process.env.PUBLIC_URL}/${pdfUrl}`;
-        console.log('Full PDF Path:', pdfPath); 
-      
-        // Get the file name from the pdfUrl and remove the "documents/" prefix
-        const fileName = pdfUrl.split('/').pop();
-        
-        // Create a temporary anchor element to trigger the download
-        const link = document.createElement('a');
-        link.href = pdfPath;
-        link.setAttribute('download', fileName);
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      };
+      // Construct the full URL to the PDF file
+      const pdfPath = `${process.env.PUBLIC_URL}/${pdfUrl}`;
+      console.log('Full PDF Path:', pdfPath); 
+    
+      // Open the PDF in a new tab
+      window.open(pdfPath, '_blank');
+    };
   
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">
